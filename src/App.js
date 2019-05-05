@@ -1,21 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './App.css';
 import InputToSevenSegments from './Components/InputToSevenSegments';
+import Colors from "./Components/Colors";
 
 function App() {
+
+  const [counter, setCount] = useState(0);
+
+  function incrememt() {
+    setCount(counter + 1);
+  }
+
   return (
     <div className="App">
+      <button onClick={incrememt}>Count!</button>
       <div className={"container"}>
         <InputToSevenSegments
-          number={'!867-5309!'}
-          className={'redglow'}
-          />
-        <InputToSevenSegments
-          number={'3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679'}
-          colors={['#00CC00', '#11DD11', '#33DD33', '#44DD44']}
+          number={'#  ' + counter}
           className={'greenglow'}
-        />
+          colors = {Colors.green}
+          />
       </div>
     </div>
   );

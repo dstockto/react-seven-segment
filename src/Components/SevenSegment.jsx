@@ -1,13 +1,15 @@
 import React from "react";
 
 import "./SevenSegment.css";
+import Colors from './Colors';
 
 export default function SevenSegment({segments, colors, className}) {
   colors = colors || [];
-  colors[0] = colors[0] || "#cc0000";
-  colors[1] = colors[1] || "#ff1111";
-  colors[2] = colors[2] || "#ff3333";
-  colors[3] = colors[3] || "#cc4444";
+  const defaultColor = Colors.green;
+  colors[0] = colors[0] || defaultColor[0];
+  colors[1] = colors[1] || defaultColor[1];
+  colors[2] = colors[2] || defaultColor[2];
+  colors[3] = colors[3] || defaultColor[3];
   className = className || 'greenglow';
 
   function getSegments(segments) {
@@ -30,9 +32,8 @@ export default function SevenSegment({segments, colors, className}) {
       }, 0);
 
       if (neighbors > 0) {
-        // console.log({neighbors, combo});
         output = output.concat(
-          <div key={combo} className={combo} style={{"backgroundColor": colors[neighbors], "gridArea": combo}} />
+          <div key={combo} className={[combo, className].join(' ')} style={{"backgroundColor": colors[neighbors], "gridArea": combo}} />
         )
       }
 

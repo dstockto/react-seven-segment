@@ -1,9 +1,10 @@
 import React from "react";
 import SevenSegment from './SevenSegment';
+import Colors from './Colors';
 
 export default function SevenSegmentAdapter({number, colors, className}) {
   const turnedOff = <SevenSegment
-    colors={['#222', '#333', '#333', '#333']}
+    colors={Colors.off}
     segments={['a', 'b', 'c', 'd', 'e', 'f', 'g', 'dot']}
     className={'grayglow'}
   />;
