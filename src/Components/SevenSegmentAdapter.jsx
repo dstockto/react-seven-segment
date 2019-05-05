@@ -1,7 +1,7 @@
 import React from "react";
 import SevenSegment from './SevenSegment';
 
-export default function SevenSegmentAdapter({number}) {
+export default function SevenSegmentAdapter({number, colors}) {
   const turnedOff = <SevenSegment
     colors={['#DDD', '#BBB', '#BBB', '#CCC']}
     segments={['a', 'b', 'c', 'd', 'e', 'f', 'g']}
@@ -29,7 +29,7 @@ export default function SevenSegmentAdapter({number}) {
     if (number[1] === '.') {
       segments = segments.concat(segmentMap.get('.'));
     }
-    return (<SevenSegment segments={segments} />);
+    return (<SevenSegment colors={colors} segments={segments} />);
   }
 
   return turnedOff;
