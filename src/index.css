@@ -6,12 +6,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #222222;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(13, 1fr);
-  gap: .25rem;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: .75rem;
   grid-template-rows: auto;
 }
 

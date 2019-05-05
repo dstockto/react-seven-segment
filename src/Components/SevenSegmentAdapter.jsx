@@ -1,10 +1,11 @@
 import React from "react";
 import SevenSegment from './SevenSegment';
 
-export default function SevenSegmentAdapter({number, colors}) {
+export default function SevenSegmentAdapter({number, colors, className}) {
   const turnedOff = <SevenSegment
-    colors={['#DDD', '#BBB', '#BBB', '#CCC']}
-    segments={['a', 'b', 'c', 'd', 'e', 'f', 'g']}
+    colors={['#222', '#333', '#333', '#333']}
+    segments={['a', 'b', 'c', 'd', 'e', 'f', 'g', 'dot']}
+    className={'grayglow'}
   />;
 
   const segmentMap = new Map(
@@ -19,6 +20,7 @@ export default function SevenSegmentAdapter({number, colors}) {
       ['7', ['a', 'b', 'c']],
       ['8', ['a', 'b', 'c', 'd', 'e', 'f', 'g']],
       ['9', ['a', 'b', 'c', 'd', 'f', 'g']],
+      ['-', ['g']],
       [' ', []],
       ['.', ['dot']]
     ]
@@ -29,7 +31,7 @@ export default function SevenSegmentAdapter({number, colors}) {
     if (number[1] === '.') {
       segments = segments.concat(segmentMap.get('.'));
     }
-    return (<SevenSegment colors={colors} segments={segments} />);
+    return (<SevenSegment colors={colors} segments={segments} className={className} />);
   }
 
   return turnedOff;

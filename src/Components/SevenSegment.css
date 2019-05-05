@@ -13,3 +13,15 @@
 .seven-segment > .dot {
     border-radius: 50%;
 }
+
+.seven-segment > div.greenglow {
+    box-shadow: 0 0 11px 5px darkgreen;
+}
+
+.seven-segment > div.redglow {
+    box-shadow: 0 0 11px 5px darkred;
+}
+
+.seven-segment > div.grayglow {
+    box-shadow: 0 0 5px 5px #111;
+}
