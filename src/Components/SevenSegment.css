@@ -1,0 +1,27 @@
+.seven-segment {
+    display: grid;
+    grid-template-areas:
+            "af   a  ab"
+            "f    .   b"
+            "efg  g bcg"
+            "e    .   c"
+            "de   d  cd";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr;
+}
+
+/*.af {*/
+/*    border-radius: 50% 0 0 0;*/
+/*}*/
+
+/*.ab {*/
+/*    border-radius: 0 50% 0 0;*/
+/*}*/
+
+/*.cd {*/
+/*    border-radius: 0 0 50% 0;*/
+/*}*/
+
+/*.de {*/
+/*    border-radius: 0 0 0 50%;*/
+/*}*/
