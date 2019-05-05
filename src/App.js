@@ -1,24 +1,13 @@
 import React from 'react';
 
 import './App.css';
-import SevenSegmentAdapter from './Components/SevenSegmentAdapter';
+import InputToSevenSegments from './Components/InputToSevenSegments';
 
 function App() {
   return (
     <div className="App">
       <div className={"container"}>
-        <SevenSegmentAdapter />
-        <SevenSegmentAdapter number={0} />
-        <SevenSegmentAdapter number={1} />
-        <SevenSegmentAdapter number={2} />
-        <SevenSegmentAdapter number={3} />
-        <SevenSegmentAdapter number={4} />
-        <SevenSegmentAdapter number={5} />
-        <SevenSegmentAdapter number={6} />
-        <SevenSegmentAdapter number={7} />
-        <SevenSegmentAdapter number={8} />
-        <SevenSegmentAdapter number={9} />
-        <SevenSegmentAdapter number={null} />
+        <InputToSevenSegments number={'3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679'} />
       </div>
     </div>
   );

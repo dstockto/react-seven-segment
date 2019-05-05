@@ -17,7 +17,7 @@ export default function SevenSegment({segments, colors}) {
     }, []);
   }
 
-  function getIntersections(props) {
+  function getIntersections() {
     const combos = ["af", "ab", "efg", "bcg", "de", "cd"];
 
     return combos.reduce((output, combo) => {
@@ -53,4 +53,4 @@ export default function SevenSegment({segments, colors}) {
 //        ggg
 //       e   c
 //       e   c
-//        ddd
+//        ddd  dot
