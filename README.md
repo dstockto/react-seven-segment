@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React App Seven Segment Display Toy   
 
-## Available Scripts
+This is a toy app to explore CSS grid, react and creating adapters to show
+the relationship between generic flexible constructs and more specific but
+less flexible APIs.
 
-In the project directory, you can run:
+There are 3 main components in this project:
 
-### `npm start`
+* SevenSegment - This is the component that actually displays a seven-segment
+    display on the screen. For anyone not aware, a seven-segment display is the
+    digital numeric display often found in alarm clocks, calculators and digital
+    watches. There are seven lines that can be illuminated in various ways to
+    display the numbers 0-9. There's also a "dot" that can be used to display 
+    decimal numbers as well. It also accepts an array of colors and a className. 
+    The colors and className can be used to change how the display looks. The Colors
+    object provides some examples for red and green and "off".
+    
+* SevenSegmentAdapter - This component receives usually a character representing a number. 
+    This adapter takes the input and converts to the inputs that the SevenSegment 
+    component needs in order to light up the right segments. The input prop is called
+    "number". It is a string, representing a digit or a digit with a trailing decimal.
+    Certain other characters could be encoded. You can modify this adapter to allow for
+    additional characters to be rendered. This adapter is responsible for creating
+    a SevenSegment with the right inputs to show the provided character. If the input
+    character is not recognized, it will display a SevenSegment that looks "off". This
+    is different than providing a space (" ") character which will result in a 
+    SevenSegment where nothing is lit.
+    
+* InputToSevenSegments - This component receives a string (also called number). It is
+    responsible for converting a long string into an array of SevenSegmentAdapter 
+    components which are in turn used to render SevenSegment components. It also accepts
+    props for `colors` and `className` that will be passed down into the SevenSegment 
+    component.
+    
+The idea behind this software toy is to play with the components above while working to 
+understand the trade-offs between being generic and extremely flexible and being 
+specific which implies fewer use-cases but that it is easier to use.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The provided application starts with a simple counter that automatically updates.
+If you remove or disable the useInterval call (custom hook) then you'll be able to
+click the provided button to increment the counter. But that's just the start. You 
+should see what else you can do.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Some ideas:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Change the colors used to render. Red is already provided, but you can add more.
+* Build a different display - make a sports scoreboard, for instance
+* Update the SevenSegmentAdapter so other characters can be displayed
+* Build an adapter that will "animate" to the provided values - for instance cycling through the characters until the right ones are reached
+* Build an adapter that will cycle colors of the display
+* Figure out how you would design an RGB or color-capable SevenSegment. How would it complicate
+    the API for SevenSegment?
+* Implement a full alphabet in the SevenSegmentAdapter - https://en.wikichip.org/wiki/seven-segment_display/representing_letters - What other concerns would 
+    your SevenSegmentAdapter have?
+* Update the CSS so the display is more realistic. 
+* Take a look at Alphanumeric Displays. How could you represent them using Grid and CSS? https://www.adafruit.com/product/1911
+* Implement a SevenSegment using SVG - make the shapes of the lines resemble a real Seven
+    Segment Display.
+* Update the grid to support a "colon" display of two dots in the center of the top and 
+    bottom squares. 
+* Anything else you can think of. Did you come up with something great? I want to see! 
+* Found a bug or a way to make this work better or more efficiently? PRs are welcome.
+ 
