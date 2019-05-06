@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import './App.css';
 import InputToSevenSegments from './Components/InputToSevenSegments';
 import Colors from "./Components/Colors";
+import useInterval from './Helpers/useInterval';
 
 function App() {
 
@@ -12,6 +13,8 @@ function App() {
     setCount(counter + 1);
   }
 
+  useInterval(incrememt, 50);
+
   return (
     <div className="App">
       <button onClick={incrememt}>Count!</button>
@@ -19,8 +22,8 @@ function App() {
         <InputToSevenSegments
           number={'#  ' + counter}
           className={'greenglow'}
-          colors = {Colors.green}
-          />
+          colors={Colors.green}
+        />
       </div>
     </div>
   );
