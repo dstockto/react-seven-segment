@@ -24,12 +24,6 @@ body {
   border: 1px solid blue;
 }
 
-.bloop {
-  background-color: deepskyblue;
-  display: block;
-  height: 1.2rem;
-}
-
 .container > .seven-segment {
   height: 100px;
   width: 100px;
