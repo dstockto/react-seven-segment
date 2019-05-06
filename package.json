@@ -1,5 +1,8 @@
 {
-  "name": "array_explorer",
+  "name": "react-seven-segment",
+  "author": {
+    "name": "David Stockton <dave@davidstockton.com>"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
