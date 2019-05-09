@@ -21,8 +21,8 @@ function App() {
       <div className={"container"}>
         <InputToSevenSegments
           number={'#  ' + counter}
-          className={'greenglow'}
-          colors={Colors.green}
+          className={'purpleglow'}
+          colors={Colors.purple}
         />
       </div>
     </div>
