@@ -4,6 +4,7 @@ import './App.css';
 import InputToSevenSegments from './Components/InputToSevenSegments';
 import Colors from "./Components/Colors";
 import useInterval from './Helpers/useInterval';
+import SevenSegment from "./Components/SevenSegment";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           className={'purpleglow'}
           colors={Colors.purple}
         />
+        <InputToSevenSegments number={'Error#867-5309'} colors={Colors.red} className={'redglow'} />
       </div>
     </div>
   );
