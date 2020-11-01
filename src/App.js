@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       <div className={"container"}>
         <Bouncer
-          number={'1337'}
-          colors={Colors.red}
-          className={'redglow'}
+          number={'boobiEs'}
+          colors={Colors.pink}
+          className={'pinkglow'}
           size={14}
           speed={250}
         />

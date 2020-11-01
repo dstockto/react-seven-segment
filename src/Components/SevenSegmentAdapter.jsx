@@ -31,6 +31,7 @@ export default function SevenSegmentAdapter({number, colors, className}) {
       ['a', ['c', 'd', 'g', 'e', 'dot']],
       ['l', ['b', 'c', 'dot']],
       ['s', ['a', 'f', 'c', 'd', 'g']],
+      ['i', ['f', 'e']],
     ]
   );
 
