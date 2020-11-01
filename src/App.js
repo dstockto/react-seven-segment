@@ -16,8 +16,9 @@ function App() {
           speed={250}
         />
         <Bouncer
-          number={'Error'}
-          className={'purpleglow'}
+          number={'balls'}
+          className={'blueglow'}
+          colors={Colors.blue}
           size={14}
         />
         <Bouncer
