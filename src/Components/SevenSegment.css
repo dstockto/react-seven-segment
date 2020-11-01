@@ -33,3 +33,7 @@
 .seven-segment > div.grayglow {
     box-shadow: 0 0 5px 5px #111;
 }
+
+.seven-segment > div.pinkglow {
+    box-shadow: 0 0 5px 5px deeppink;
+}
