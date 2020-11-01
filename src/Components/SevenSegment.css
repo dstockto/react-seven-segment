@@ -26,6 +26,10 @@
     box-shadow: 0 0 5px 3px #DB9EFF;
 }
 
+.seven-segment > div.blueglow {
+    box-shadow: 0 0 5px 5px darkblue;
+}
+
 .seven-segment > div.grayglow {
     box-shadow: 0 0 5px 5px #111;
 }
