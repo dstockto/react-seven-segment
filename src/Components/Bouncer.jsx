@@ -26,9 +26,6 @@ export function Bouncer(props) {
 }
 
 class Movement {
-  size;
-  position;
-  direction;
   constructor(size, position = 0, direction = 1) {
     this._size = size;
     this._position = position;
@@ -37,14 +34,14 @@ class Movement {
   }
 
   move() {
-    let newPosition = this.position + this.direction;
-    let newDirection = this.direction;
+    let newPosition = this._position + this._direction;
+    let newDirection = this._direction;
 
-    if (newPosition >= this.size || newPosition === 0) {
+    if (newPosition >= this._size || newPosition === 0) {
       newDirection = -newDirection;
     }
 
-    return new Movement(this.size, newPosition, newDirection);
+    return new Movement(this._size, newPosition, newDirection);
   }
 
   get size() {
