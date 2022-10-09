@@ -11,7 +11,7 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",
     "set-value": "^2.0.1",
-    "lodash": "^4.17.13"
+    "lodash": "^4.17.21"
   },
   "scripts": {
     "start": "react-scripts start",
